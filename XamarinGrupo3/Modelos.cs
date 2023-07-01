@@ -13,8 +13,8 @@ namespace XamarinGrupo3
         public string cedulatec { set; get; }
         public string ciudadtec { set; get; }
         public string telefonotec { set; get; }
-        public DateTime edaduser { get; set; }
-        public string generouser { get; set; }
+        public DateTime edadtecn { get; set; }
+        public string generotecn { get; set; }
         public string roletec { get; set; }
 
     }
