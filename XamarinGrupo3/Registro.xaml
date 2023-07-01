@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinGrupo3.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="REGISTRO" />
+            
+            <Picker Title="Seleccione el Rol" x:Name="pUsuarios" SelectedIndexChanged="pUsuarios_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Usuario</x:String>
+                <x:String>Tecnico</x:String>
+            </Picker.Items>
+            </Picker>    
+                
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese su Nombre" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Apellido" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingrese su Apellido" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="Edad" Grid.Row="2" Grid.Column="0"/>
+            <DatePicker x:Name="dpEdad" Date="01/07/2023" Format="M/dd/yyyy" Grid.Row="2" Grid.Column="1"/>
+            <Label Text="Genero" Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="txtGenero" Placeholder="Ingrese su Genero" Grid.Row="3" Grid.Column="1"/>
+            <Label Text="Cedula" Grid.Row="4" Grid.Column="0"/>
+            <Entry x:Name="txtCedula" Placeholder="Ingrese su Cedula" Grid.Row="4" Grid.Column="1"/>     
+            <Label Text="Telefono" Grid.Row="5" Grid.Column="0"/>
+            <Entry x:Name="txtTelefono" Placeholder="Ingrese su Numero Celular" Grid.Row="5" Grid.Column="1"/> 
+            <Label Text="Ciudad" Grid.Row="6" Grid.Column="0"/>
+            <Entry x:Name="txtCiudad" Placeholder="Ingrese su Ciudad" Grid.Row="6" Grid.Column="1"/> 
+            <Label Text="Empresa" Grid.Row="7" Grid.Column="0"/>
+            <Entry x:Name="txtEmpresa" Placeholder="Ingrese su Empresa" Grid.Row="7" Grid.Column="1" IsVisible="false"/> 
+            </Grid>
+    
+            <Button x:Name="btnRegistro" Text="Registrarse" Clicked="btnRegistro_Clicked"/>
+                
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
