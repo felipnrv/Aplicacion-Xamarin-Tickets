@@ -45,9 +45,6 @@ namespace XamarinGrupo3
             string ciudad = txtCiudad.Text;
             string empresa = txtEmpresa.Text;
 
-           
-          
-
             if (pUsuarios.SelectedIndex == 1)
             {
                 TecnicoModelo tecnico = new TecnicoModelo();

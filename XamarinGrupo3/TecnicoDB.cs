@@ -38,5 +38,20 @@ namespace XamarinGrupo3
             }).ToList();
 
         }
+        public async Task<TecnicoModelo> GetById(string id)
+        {
+            return (await firebaseClient.Child(nameof(TecnicoModelo)+"/"+id).OnceSingleAsync<TecnicoModelo>());
+
+        }
+        public async Task<bool> Update(TecnicoModelo tecnico)
+        {
+            await firebaseClient.Child(nameof(TecnicoModelo) + "/" + tecnico.IdTecn).PutAsync(JsonConvert.SerializeObject(tecnico));
+            return true;
+        }
+        public async Task<bool> Borrar (string id)
+        {
+            await firebaseClient.Child(nameof(TecnicoModelo) + "/" + id).DeleteAsync();
+            return true;
+        }
     }
 }

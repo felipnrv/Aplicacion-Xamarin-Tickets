@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinGrupo3.RegistroTicket">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="REGISTRO TICKET" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNombreTicket" Placeholder="Ingrese su Nombre" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Direccion" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtDireccion" Placeholder="Ingrese su Apellido" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Detalle del Ticket" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtdetck" Placeholder="Ingrese los detalles del problema del ticket"/>
+                <DatePicker x:Name="dpFecha" Date="01/07/2023" Format="M/dd/yyyy" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Actividades que se realizaron para la solucion" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtAct" Placeholder="Ingrese los pasos que se realizaron para la solucion"/>
+                <Label Text="Detalle de la solución" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txtDetSol" Placeholder="Ingrese su Cedula" Grid.Row="4" Grid.Column="1" />
+                <Label Text="Marca" Grid.Row="5" Grid.Column="0"/>
+                <Entry x:Name="txtMarca" Placeholder="Ingrese su Numero Celular" Grid.Row="5" Grid.Column="1" />
+                <Label Text="Modelo" Grid.Row="6" Grid.Column="0"/>
+                <Entry x:Name="txtModelo" Placeholder="Ingrese su Ciudad" Grid.Row="6" Grid.Column="1"/>
+                <Label x:Name="Serie" Text="Empresa" Grid.Row="7" Grid.Column="0" IsVisible="false"/>
+                <Entry x:Name="txtSerie" Placeholder="Ingrese su Empresa" Grid.Row="7" Grid.Column="1" />
+            </Grid>
+
+            <Button x:Name="btnRegistro" Text="Registrarse" Clicked="btnRegistro_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

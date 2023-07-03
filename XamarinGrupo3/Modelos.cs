@@ -44,5 +44,6 @@ namespace XamarinGrupo3
         public string modelo { set; get; }
         public string serie { set; get; }
         public string estado { set; get; }
+        public DateTime fecha { set; get;}
     }
 }
