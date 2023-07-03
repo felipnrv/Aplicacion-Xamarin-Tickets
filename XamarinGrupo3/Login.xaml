@@ -42,7 +42,8 @@
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
 
-                                        <Button x:Name="btnRecuperarContrasena" Text="¿Olvidaste la contraseña?"  TextColor="Black" HorizontalOptions="EndAndExpand" FontAttributes="Bold" Clicked="btnRecuperarContrasena_Clicked"></Button>
+
+                                <Button x:Name="btnRecuperarContrasena" Text="¿Olvidaste la contraseña?" BackgroundColor="DarkGray"  TextColor="White" HorizontalOptions="EndAndExpand" CornerRadius="30" FontAttributes="Bold" Clicked="btnRecuperarContrasena_Clicked"></Button>
 
                                     </StackLayout>
                                     <Button Text="Iniciar Sesión" x:Name="btnIniciarSesion" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="btnIniciarSesion_Clicked"></Button>
@@ -50,7 +51,7 @@
 
                                         <Label Text="¿No estas Registrado?" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"></Label>
 
-                                        <Button Text="Registrate aquí" x:Name="btnRegistro"  TextColor="Black" HorizontalOptions="EndAndExpand" FontAttributes="Bold"  Clicked="btnRegistro_Clicked"></Button>
+                                <Button Text="Registrate aquí" x:Name="btnRegistro" BackgroundColor="DarkGray" TextColor="White" FontAttributes="Bold" CornerRadius="30" HorizontalOptions="EndAndExpand" Clicked="btnRegistro_Clicked"></Button>
 
                                     </StackLayout>
 

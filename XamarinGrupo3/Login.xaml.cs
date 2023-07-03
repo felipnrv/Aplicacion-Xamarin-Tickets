@@ -25,7 +25,7 @@ namespace XamarinGrupo3
         private void btnIniciarSesion_Clicked(object sender, EventArgs e)
         {
             if
-              (txtUsuario.Text == "admin" && txtContrasena.Text == "123")
+              (txtUsuario.Text == "admin" || txtContrasena.Text == "123")
             {
                 Navigation.PushAsync(new Tickets());
             }
@@ -33,9 +33,9 @@ namespace XamarinGrupo3
             {
                 DisplayAlert("Advertencia", "Nombre de Usuario o Contraseña incorrecta", "Cerrar");
             }
-            if (txtUsuario.Text == "Tecnico" && txtContrasena.Text == "4567")
+            if (txtUsuario.Text == "Tecnico" || txtContrasena.Text == "4567")
             {
-                Navigation.PushAsync(new Tickets());
+                Navigation.PushAsync(new DetallesTicket ());
 
             }
             else
