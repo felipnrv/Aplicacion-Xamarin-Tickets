@@ -22,7 +22,8 @@ namespace XamarinGrupo3
         protected override async void OnAppearing()
         {
             var tecnico = await ticketmodelo.GetAll();
-            TicketLista.ItemsSource= tecnico;
+            TicketLista.ItemsSource= null;
+            TicketLista.ItemsSource = tecnico;
         }
 
         private void AddNuevoTicket_Clicked(object sender, EventArgs e)
@@ -54,9 +55,19 @@ namespace XamarinGrupo3
             await Navigation.PushModalAsync(new RegistroTicketEditar(ticket));
         }
 
-        private void TapBorrar_Tapped(object sender, EventArgs e)
+        private async void TapBorrar_Tapped(object sender, EventArgs e)
         {
-
+            string id = ((TappedEventArgs)e).Parameter.ToString();
+            bool isDelete = await ticketmodelo.Borrar(id);
+            if(isDelete)
+            {
+                await DisplayAlert("Información", "El registro ha sido borrado", "Cerrar");
+                OnAppearing();
+            }
+            else
+            {
+                await DisplayAlert("Error", "El Registro no se elimino correctamente", "Cerrar");
+            }
         }
     }
 }
