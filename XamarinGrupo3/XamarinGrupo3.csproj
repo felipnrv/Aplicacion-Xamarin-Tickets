@@ -19,7 +19,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Detalle del ticket.xaml">
+    <Compile Update="DetallesCompltTicket.xaml.cs">
+      <DependentUpon>DetallesCompltTicket.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="DetallesCompltTicket.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="DetallesTicket.xaml">

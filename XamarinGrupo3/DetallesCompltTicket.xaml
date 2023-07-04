@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinGrupo3.DetallesCompletos" Title="Informacion detallada">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Info de tickets" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
+            <Label x:Name="txtID" FontSize="Medium"/>
+            <Label x:Name="txtNombre" FontSize="Medium"/>
+            <Label x:Name="txtFecha" FontSize="Medium"/>
+            <Label x:Name="txtMarca" FontSize="Medium"/>
+            <Label x:Name="txtModelo" FontSize="Medium"/>
+            <Label x:Name="txtSerie" FontSize="Medium"/>
+            <Label x:Name="txtdirecciontick" FontSize="Medium"/>
+            <Label x:Name="detalletick" FontSize="Medium"/>
+            <Label x:Name="actsolucion" FontSize="Medium"/>
+            <Label x:Name="detsolucion" FontSize="Medium"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
