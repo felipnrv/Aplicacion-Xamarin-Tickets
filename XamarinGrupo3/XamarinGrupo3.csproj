@@ -22,6 +22,9 @@
     <Compile Update="DetallesCompltTicket.xaml.cs">
       <DependentUpon>DetallesCompltTicket.xaml</DependentUpon>
     </Compile>
+    <Compile Update="UsuarioVista.xaml.cs">
+      <DependentUpon>UsuarioVista.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -40,7 +43,10 @@
     <EmbeddedResource Update="RegistroTicket.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Tickets.xaml">
+    <EmbeddedResource Update="RegistroTicketEditar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UsuarioVista.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace XamarinGrupo3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tickets : ContentPage
+    public partial class UsuarioVista : ContentPage
     {
-        public Tickets()
+        public UsuarioVista()
         {
             InitializeComponent();
         }

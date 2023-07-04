@@ -40,5 +40,23 @@ namespace XamarinGrupo3
             Navigation.PushAsync(new DetallesCompletos(ticket));
             ((ListView)sender).SelectedItem = null;
         }
+
+        private async void TapEditar_Tapped(object sender, EventArgs e)
+        {
+            string id = ((TappedEventArgs)e).Parameter.ToString();
+            var ticket=await ticketmodelo.GetById(id);
+            if (ticket == null)
+            {
+                await DisplayAlert("Alerta", "Datos no encontrados", "Cerrar");
+
+            }
+            ticket.IdTicket= id;
+            await Navigation.PushModalAsync(new RegistroTicketEditar(ticket));
+        }
+
+        private void TapBorrar_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }

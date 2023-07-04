@@ -18,6 +18,18 @@
                                 <Label Text="{Binding direcciontick}" FontSize="Medium"/>
                                 <Label Text="{Binding fecha}" FontSize="Medium"/>
                             </StackLayout>
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                <Image Source="editar.png" HeightRequest="20" WidthRequest="30" >
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="TapEditar" Tapped="TapEditar_Tapped" CommandParameter="{Binding Id}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image Source="borrar.png" HeightRequest="20" WidthRequest="30" >
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="TapBorrar" Tapped="TapBorrar_Tapped" CommandParameter="{Binding Id}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

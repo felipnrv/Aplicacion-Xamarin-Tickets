@@ -27,7 +27,7 @@ namespace XamarinGrupo3
             if
               (txtUsuario.Text == "admin" || txtContrasena.Text == "123")
             {
-                Navigation.PushAsync(new Tickets());
+                Navigation.PushAsync(new UsuarioVista());
             }
             else
             {
