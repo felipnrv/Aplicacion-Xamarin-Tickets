@@ -4,6 +4,7 @@ using System.Text;
 
 namespace XamarinGrupo3
 {
+    //Definir los modelos
     public class TecnicoModelo
     {
         public string IdTecn { get; set; }

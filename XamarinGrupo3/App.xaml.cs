@@ -10,6 +10,7 @@ namespace XamarinGrupo3
         {
             InitializeComponent();
 
+            //Navegar entre paginas
             MainPage = new NavigationPage(new Login());
         }
 
