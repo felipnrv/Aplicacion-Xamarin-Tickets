@@ -12,6 +12,8 @@ namespace XamarinGrupo3
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistroTicket : ContentPage
     {
+        //Se usa para acceder a la clase TicketsDB 
+        //Se inicializa como nueva instancia(objeto de una clase especifica)
         TicketsDB Guardtickets = new TicketsDB();
         public RegistroTicket()
         {

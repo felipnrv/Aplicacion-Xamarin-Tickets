@@ -18,11 +18,16 @@ namespace XamarinGrupo3
             InitializeComponent();
             
         }
-
+        //protected es para que solo sea accesible en esta clase
+        //override la sobreescribe
+        //OnAppe se ejecuta cuando la ventana aparezca en la interfaz del user
         protected override async void OnAppearing()
         {
+            //se obtiene el metodo
             var tecnico = await ticketmodelo.GetAll();
+            //Vacia la lista
             TicketLista.ItemsSource= null;
+            //asigna a la lista los datos
             TicketLista.ItemsSource = tecnico;
         }
 
@@ -37,8 +42,10 @@ namespace XamarinGrupo3
             {
                 return;
             }
+            //Intentar conversion al modelo,falla es null
             var ticket = e.Item as TicketModelo;
             Navigation.PushAsync(new DetallesCompletos(ticket));
+            //Se quita la seleccion del objeto
             ((ListView)sender).SelectedItem = null;
         }
 

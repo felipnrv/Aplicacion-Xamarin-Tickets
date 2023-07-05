@@ -53,6 +53,7 @@ namespace XamarinGrupo3
         }
         public async Task<UsuarioModelo> GetById(string id)
         {
+            //Regresa un solo record en la ruta especifica 
             return (await firebaseClient.Child(nameof(UsuarioModelo) + "/" + id).OnceSingleAsync<UsuarioModelo>());
             
 
