@@ -61,7 +61,7 @@ namespace XamarinGrupo3
         public async Task<bool> Update(UsuarioModelo usuario)
         {
             //Crea la ruta a la que accede
-            await firebaseClient.Child(nameof(UsuarioModelo) + "/" + usuario.IdUser).PutAsync(JsonConvert.SerializeObject(usuario));
+            await firebaseClient.Child(nameof(UsuarioModelo) + "/" + usuario.Id).PutAsync(JsonConvert.SerializeObject(usuario));
             return true;
 
         }

@@ -25,7 +25,7 @@ namespace XamarinGrupo3
             txtMarca.Text = ticket.marca;
             txtModelo.Text = ticket.modelo;
             txtSerie.Text = ticket.serie;
-            txtId.Text = ticket.IdTicket;
+            txtId.Text = ticket.Id;
         }
 
         private async void btnEditar_Clicked(object sender, EventArgs e)

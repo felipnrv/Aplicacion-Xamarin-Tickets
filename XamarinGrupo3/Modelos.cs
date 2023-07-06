@@ -7,7 +7,7 @@ namespace XamarinGrupo3
     //Definir los modelos
     public class TecnicoModelo
     {
-        public string IdTecn { get; set; }
+        public string Id { get; set; }
         public string nombretec { get; set; }
         public string apellidotec { get; set; }
         public string empresatec { get; set; }
@@ -22,7 +22,7 @@ namespace XamarinGrupo3
 
     public class UsuarioModelo
     {
-        public string IdUser { get; set; }
+        public string Id { get; set; }
         public string nombreuser { get; set; }
         public string apellidouser { get; set; }
         public DateTime edaduser { get; set; }
@@ -35,7 +35,7 @@ namespace XamarinGrupo3
 
     public class TicketModelo
     {
-        public string IdTicket { get; set; }
+        public string Id { get; set; }
         public string NombreTick { set; get; }
         public string direcciontick { set; get; }
         public string detalletick { set; get; }

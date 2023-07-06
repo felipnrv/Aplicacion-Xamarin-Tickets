@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinGrupo3.DetallesTicket">
+             x:Class="XamarinGrupo3.DetallesUsuario">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Nuevo" x:Name="AddNuevoTicket" Clicked="AddNuevoTicket_Clicked"/>
+        <ToolbarItem Text="Nuevo" x:Name="AddNuevoUsuario" Clicked="AddNuevoUsuario_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="TicketLista" ItemsSource="{Binding ticket}"
-                  HasUnevenRows="True" ItemTapped="TicketLista_ItemTapped">
+        <ListView x:Name="UsuarioLista" ItemsSource="{Binding usuario}"
+                  HasUnevenRows="True" ItemTapped="UsuarioLista_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="5">
                             <Image Source="https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" HeightRequest="60" WidthRequest="60"/>
                             <StackLayout HorizontalOptions="StartAndExpand">
-                                <Label Text="{Binding NombreTick}" FontSize="Medium"/>
-                                <Label Text="{Binding direcciontick}" FontSize="Medium"/>
-                                <Label Text="{Binding fecha}" FontSize="Medium"/>
+                                <Label Text="{Binding nombreuser}" FontSize="Medium"/>
+                                <Label Text="{Binding apellidouser}" FontSize="Medium"/>
+                                <Label Text="{Binding telefonouser}" FontSize="Medium"/>
                             </StackLayout>
                             <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
                                 <Image Source="editar.png" HeightRequest="20" WidthRequest="30" >

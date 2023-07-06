@@ -69,6 +69,7 @@ namespace XamarinGrupo3
                   if (guardartec)
                     {
                     await DisplayAlert("Información", "Registro guardado correctamente", "Cerrar");
+                    await Navigation.PushAsync(new Page());
                     }
                   else
                     {

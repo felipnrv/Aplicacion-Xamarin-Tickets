@@ -10,41 +10,37 @@ using Xamarin.Forms.Xaml;
 namespace XamarinGrupo3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DetallesTicket : ContentPage
+    public partial class DetallesUsuario : ContentPage
     {
-        TicketsDB ticketmodelo = new TicketsDB();
-        public DetallesTicket()
+        UsuarioDB usuarioDB = new UsuarioDB();
+        public DetallesUsuario()
         {
             InitializeComponent();
-            
         }
-        //protected es para que solo sea accesible en esta clase
-        //override la sobreescribe
-        //OnAppe se ejecuta cuando la ventana aparezca en la interfaz del user
         protected override async void OnAppearing()
         {
             //se obtiene el metodo
-            var tecnico = await ticketmodelo.GetAll();
+            var tecnico = await usuarioDB.GetAll();
             //Vacia la lista
-            TicketLista.ItemsSource= null;
+            UsuarioLista.ItemsSource = null;
             //asigna a la lista los datos
-            TicketLista.ItemsSource = tecnico;
+            UsuarioLista.ItemsSource = tecnico;
         }
 
-        private void AddNuevoTicket_Clicked(object sender, EventArgs e)
+        private void AddNuevoUsuario_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RegistroTicket());
+            Navigation.PushAsync(new Registro());
         }
 
-        private void TicketLista_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void UsuarioLista_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            if(e.Item==null)
+            if (e.Item == null)
             {
                 return;
             }
             //Intentar conversion al modelo,falla es null
-            var ticket = e.Item as TicketModelo;
-            Navigation.PushAsync(new DetallesCompletos(ticket));
+            var usuario = e.Item as UsuarioModelo;
+            Navigation.PushAsync(new DetalleCompltUser(usuario));
             //Se quita la seleccion del objeto
             ((ListView)sender).SelectedItem = null;
         }
@@ -52,21 +48,21 @@ namespace XamarinGrupo3
         private async void TapEditar_Tapped(object sender, EventArgs e)
         {
             string id = ((TappedEventArgs)e).Parameter.ToString();
-            var ticket=await ticketmodelo.GetById(id);
-            if (ticket == null)
+            var usuario = await usuarioDB.GetById(id);
+            if (usuario == null)
             {
                 await DisplayAlert("Alerta", "Datos no encontrados", "Cerrar");
 
             }
-            ticket.Id= id;
-            await Navigation.PushModalAsync(new RegistroTicketEditar(ticket));
+            usuario.Id = id;
+            await Navigation.PushModalAsync(new EditarUser(usuario));
         }
 
         private async void TapBorrar_Tapped(object sender, EventArgs e)
         {
             string id = ((TappedEventArgs)e).Parameter.ToString();
-            bool isDelete = await ticketmodelo.Borrar(id);
-            if(isDelete)
+            bool isDelete = await usuarioDB.Borrar(id);
+            if (isDelete)
             {
                 await DisplayAlert("Información", "El registro ha sido borrado", "Cerrar");
                 OnAppearing();

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinGrupo3.EditarUser">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ventana de Edicion de Usuarios" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Metropolis" TextColor="DarkGray"></Label>
+
+            <Label Text="Agrega los respectivos Datos " HorizontalTextAlignment="Center" Margin="0,10,0,0" HorizontalOptions="Center" FontSize="15" FontFamily="Metropolis"></Label>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNombreUser" Placeholder="Ingrese su Nombre" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Apellido" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtApellido" Placeholder="Ingrese su Apellido" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Edad" Grid.Row="2" Grid.Column="0"/>
+                <DatePicker x:Name="dpFecha" Date="01/07/2023" Format="M/dd/yyyy" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Genero" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtGen" Placeholder="Ingrese el genero"/>
+                <Label Text="Cedula" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txtCI" Placeholder="Ingrese su Cedula" Grid.Row="4" Grid.Column="1" />
+                <Label Text="Ciudad" Grid.Row="5" Grid.Column="0"/>
+                <Entry x:Name="txtCiudad" Placeholder="Ingrese su Ciudad" Grid.Row="5" Grid.Column="1" />
+                <Label Text="Telefono" Grid.Row="6" Grid.Column="0"/>
+                <Entry x:Name="txtelf" Placeholder="Ingrese su Telefono" Grid.Row="6" Grid.Column="1"/>
+                <Entry x:Name="txtId" IsVisible="false"/>
+            </Grid>
+
+            <Button x:Name="btnEditar" Text="Editar" Clicked="btnEditar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

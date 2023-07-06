@@ -15,7 +15,7 @@ namespace XamarinGrupo3
         public DetallesCompletos(TicketModelo ticket)
         {
             InitializeComponent();
-            txtID.Text = ticket.IdTicket;
+            txtID.Text = ticket.Id;
             txtNombre.Text = ticket.NombreTick;
             txtFecha.Text = ticket.fecha.ToString();
             txtMarca.Text = ticket.marca.ToString();

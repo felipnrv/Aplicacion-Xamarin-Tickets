@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinGrupo3.DetalleCompltUser">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Info de usuarios" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
+            <Label x:Name="txtID" FontSize="Medium"/>
+            <Label x:Name="txtNombreUser" FontSize="Medium"/>
+            <Label x:Name="txtApellido" FontSize="Medium"/>
+            <Label x:Name="txtedad" FontSize="Medium" />
+            <Label x:Name="txtgenero" FontSize="Medium" />
+            <Label x:Name="txtcedula" FontSize="Medium"/>
+            <Label x:Name="txtciudad" FontSize="Medium" />
+            <Label x:Name="txttelefono" FontSize="Medium" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
