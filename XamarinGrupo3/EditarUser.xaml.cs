@@ -40,7 +40,7 @@ namespace XamarinGrupo3
             string Telefono = txtelf.Text;
 
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(edad) || string.IsNullOrEmpty(Genero) || string.IsNullOrEmpty(Cedula) || string.IsNullOrEmpty(Ciudad) || string.IsNullOrEmpty(Telefono))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(Genero) || string.IsNullOrEmpty(Cedula) || string.IsNullOrEmpty(Ciudad) || string.IsNullOrEmpty(Telefono))
             {
                 await DisplayAlert("Abrir", "Complete toda la Información", "Cerrar");
             }
