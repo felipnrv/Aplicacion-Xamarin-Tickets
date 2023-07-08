@@ -34,6 +34,7 @@ namespace XamarinGrupo3
                 ciudadtec = item.Object.ciudadtec,
                 telefonotec = item.Object.telefonotec,
                 roletec = item.Object.roletec,
+                Id=item.Key
 
             }).ToList();
 

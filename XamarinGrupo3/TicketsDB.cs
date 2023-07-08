@@ -26,7 +26,7 @@ namespace XamarinGrupo3
         {
             return (await firebaseClient.Child(nameof(TicketModelo)).OnceAsync<TicketModelo>()).Select(item => new TicketModelo
             {
-                Id=item.Object.Id,
+                Id=item.Key,
                 NombreTick=item.Object.NombreTick,
                 direcciontick=item.Object.direcciontick,
                 detalletick=item.Object.detalletick,

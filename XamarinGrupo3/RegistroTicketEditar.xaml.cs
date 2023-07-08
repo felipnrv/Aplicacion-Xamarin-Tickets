@@ -41,10 +41,12 @@ namespace XamarinGrupo3
             string marca = txtMarca.Text;
             string modelo = txtModelo.Text;
             string serie = txtSerie.Text;
+            string id = txtId.Text;
 
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(detalletck) || fechatck == DateTime.MinValue || fechatck == null || string.IsNullOrEmpty(actrlz) || string.IsNullOrEmpty(detallesol) || string.IsNullOrEmpty(marca) || string.IsNullOrEmpty(modelo) || string.IsNullOrEmpty(serie))
             {
                 await DisplayAlert("Abrir", "Complete toda la Información", "Cerrar");
+                
             }
             else
             {
@@ -57,11 +59,13 @@ namespace XamarinGrupo3
                 ticket.detsolucion = detallesol;
                 ticket.fecha = fechatck;
                 ticket.actsolucion = actrlz;
+                ticket.Id = id;
 
                 bool isUpdate = await ticketsDB.Update(ticket);
                 if (isUpdate)
                 {
                     await DisplayAlert("Información", "Registro se actualizo correctamente", "Cerrar");
+                    await Navigation.PushAsync(new DetallesTicket());
                 }
                 else
                 {

@@ -33,7 +33,7 @@ namespace XamarinGrupo3
             string nombre = txtNombreUser.Text;
             string apellido = txtApellido.Text;
             DateTime edad = dpFecha.Date;
-
+            string id = txtId.Text;
             string Genero = txtGen.Text;
             string Cedula = txtCI.Text;
             string Ciudad = txtCiudad.Text;
@@ -53,6 +53,7 @@ namespace XamarinGrupo3
                 usuario.cedulauser= Cedula;
                 usuario.ciudaduser= Ciudad;
                 usuario.telefonouser= Telefono;
+                usuario.Id = id;
                 
 
 
@@ -60,6 +61,7 @@ namespace XamarinGrupo3
                 if (isUpdate)
                 {
                     await DisplayAlert("Información", "Registro se actualizo correctamente", "Cerrar");
+                    await Navigation.PushAsync(new DetallesUsuario());
                 }
                 else
                 {

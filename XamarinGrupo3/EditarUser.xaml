@@ -32,7 +32,7 @@
                 <Label Text="Edad" Grid.Row="2" Grid.Column="0"/>
                 <DatePicker x:Name="dpFecha" Date="01/07/2023" Format="M/dd/yyyy" Grid.Row="2" Grid.Column="1"/>
                 <Label Text="Genero" Grid.Row="3" Grid.Column="0"/>
-                <Entry x:Name="txtGen" Placeholder="Ingrese el genero"/>
+                <Entry x:Name="txtGen" Placeholder="Ingrese el genero" Grid.Row="3" Grid.Column="1"/>
                 <Label Text="Cedula" Grid.Row="4" Grid.Column="0"/>
                 <Entry x:Name="txtCI" Placeholder="Ingrese su Cedula" Grid.Row="4" Grid.Column="1" />
                 <Label Text="Ciudad" Grid.Row="5" Grid.Column="0"/>

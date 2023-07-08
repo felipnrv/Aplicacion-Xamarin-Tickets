@@ -30,18 +30,19 @@
                 <Label Text="Direccion" Grid.Row="1" Grid.Column="0"/>
                 <Entry x:Name="txtDireccion" Placeholder="Ingrese su Apellido" Grid.Row="1" Grid.Column="1"/>
                 <Label Text="Detalle del Ticket" Grid.Row="2" Grid.Column="0"/>
-                <Entry x:Name="txtdetck" Placeholder="Ingrese los detalles del problema del ticket"/>
-                <DatePicker x:Name="dpFecha" Date="01/07/2023" Format="M/dd/yyyy" Grid.Row="2" Grid.Column="1"/>
-                <Label Text="Actividades que se realizaron para la solucion" Grid.Row="3" Grid.Column="0"/>
-                <Entry x:Name="txtAct" Placeholder="Ingrese los pasos que se realizaron para la solucion"/>
-                <Label Text="Detalle de la solución" Grid.Row="4" Grid.Column="0"/>
-                <Entry x:Name="txtDetSol" Placeholder="Ingrese su Cedula" Grid.Row="4" Grid.Column="1" />
-                <Label Text="Marca" Grid.Row="5" Grid.Column="0"/>
-                <Entry x:Name="txtMarca" Placeholder="Ingrese su Numero Celular" Grid.Row="5" Grid.Column="1" />
-                <Label Text="Modelo" Grid.Row="6" Grid.Column="0"/>
-                <Entry x:Name="txtModelo" Placeholder="Ingrese su Ciudad" Grid.Row="6" Grid.Column="1"/>
-                <Label x:Name="Serie" Text="Empresa" Grid.Row="7" Grid.Column="0" IsVisible="false"/>
-                <Entry x:Name="txtSerie" Placeholder="Ingrese su Empresa" Grid.Row="7" Grid.Column="1" />
+                <Entry x:Name="txtdetck" Placeholder="Ingrese los detalles del problema del ticket" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Fecha" Grid.Row="3" Grid.Column="0"/>
+                <DatePicker x:Name="dpFecha" Date="01/07/2023" Format="M/dd/yyyy" Grid.Row="3" Grid.Column="1"/>
+                <Label Text="Actividades que se realizaron para la solucion" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txtAct" Placeholder="Ingrese los pasos que se realizaron para la solucion" Grid.Row="4" Grid.Column="1"/>
+                <Label Text="Detalle de la solución" Grid.Row="5" Grid.Column="0"/>
+                <Entry x:Name="txtDetSol" Placeholder="Ingrese su Cedula" Grid.Row="5" Grid.Column="1" />
+                <Label Text="Marca" Grid.Row="6" Grid.Column="0"/>
+                <Entry x:Name="txtMarca" Placeholder="Ingrese su Numero Celular" Grid.Row="6" Grid.Column="1" />
+                <Label Text="Modelo" Grid.Row="7" Grid.Column="0"/>
+                <Entry x:Name="txtModelo" Placeholder="Ingrese su Ciudad" Grid.Row="7" Grid.Column="1"/>
+                <Label x:Name="Serie" Text="Empresa" Grid.Row="8" Grid.Column="0" IsVisible="false"/>
+                <Entry x:Name="txtSerie" Placeholder="Ingrese su Empresa" Grid.Row="8" Grid.Column="1" />
                 <Entry x:Name="txtId" IsVisible="false"/>
             </Grid>
 

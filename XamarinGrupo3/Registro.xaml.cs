@@ -25,7 +25,8 @@ namespace XamarinGrupo3
             {
                 
                 txtEmpresa.IsVisible = true;
-                lblEmpresa.IsVisible = true;            }
+                lblEmpresa.IsVisible = true;    
+            }
             else
             {
                 
@@ -69,13 +70,13 @@ namespace XamarinGrupo3
                   if (guardartec)
                     {
                     await DisplayAlert("Información", "Registro guardado correctamente", "Cerrar");
-                    await Navigation.PushAsync(new Page());
+                    await Navigation.PushAsync(new DetallesUsuario());
                     }
                   else
                     {
                     await DisplayAlert("Error", "El registro no se guardo correctamente", "Cerrar");
-
-                     }
+                    await Navigation.PushAsync(new DetallesUsuario());
+                    }
 
                 }
             }
@@ -98,22 +99,25 @@ namespace XamarinGrupo3
                 usuario.roleuser = pUsuarios.Items[pUsuarios.SelectedIndex];
 
                 var guardar = await usuariodb.GuardarUsuario(usuario);
+
                 if (guardar)
                 {
                     await DisplayAlert("Información", "Registro guardado correctamente", "Cerrar");
+                    await Navigation.PushAsync(new DetallesUsuario());
                 }
                 else
                 {
                     await DisplayAlert("Error", "El registro no se guardo correctamente", "Cerrar");
-
-                }
+                    await Navigation.PushAsync(new DetallesUsuario());
+                    }
                 }
             }
+
         }
 
         private void pGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

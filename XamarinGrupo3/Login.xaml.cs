@@ -15,6 +15,7 @@ namespace XamarinGrupo3
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void btnRecuperarContrasena_Clicked(object sender, EventArgs e)
@@ -22,31 +23,32 @@ namespace XamarinGrupo3
 
         }
 
-        private void btnIniciarSesion_Clicked(object sender, EventArgs e)
+        private async void btnIniciarSesion_Clicked(object sender, EventArgs e)
         {
-            if
-              (txtUsuario.Text == "admin" && txtContrasena.Text == "123")
+           if (txtUsuario.Text == "user" && txtContrasena.Text=="123" )
             {
-                Navigation.PushAsync(new DetallesUsuario());
+                await Navigation.PushAsync(new DetallesUsuario());
             }
-            else
-            {
-                DisplayAlert("Advertencia", "Nombre de Usuario o Contraseña incorrecta", "Cerrar");
+            if (txtUsuario.Text == "tecn" && txtContrasena.Text == "456") 
+            { 
+                await Navigation.PushAsync (new DetallesTicket());
             }
-            if (txtUsuario.Text == "Tecnico" && txtContrasena.Text == "4567")
+           if (txtContrasena.Text != "456" && txtContrasena.Text != "123")
             {
-                Navigation.PushAsync(new DetallesTicket());
+                await DisplayAlert("", "Error", "Cerrar");
+            }
+            if (txtUsuario.Text != "tecn" && txtUsuario.Text != "user")
+            {
+                await DisplayAlert("", "Error", "Cerrar");
+            }
 
-            }
-            else
-            {
-                DisplayAlert("Advertencia", "Nombre de Usuario o Contraseña incorrecta", "Cerrar");
-            }
         }
 
         private void btnRegistro_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Registro());
         }
+
+      
     }
 }
