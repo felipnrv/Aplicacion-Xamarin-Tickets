@@ -25,13 +25,19 @@ namespace XamarinGrupo3
             {
                 
                 txtEmpresa.IsVisible = true;
-                lblEmpresa.IsVisible = true;    
+                lblEmpresa.IsVisible = true; 
+                
+              
+                
             }
             else
             {
-                
+               
                 txtEmpresa.IsVisible = false;
                 lblEmpresa.IsVisible = false;
+                
+                
+                
             }
         }
 
@@ -51,7 +57,7 @@ namespace XamarinGrupo3
                 TecnicoModelo tecnico = new TecnicoModelo();
                 if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || edad == DateTime.MinValue || edad == null || string.IsNullOrEmpty(cedula) || string.IsNullOrEmpty(telefono) || string.IsNullOrEmpty(ciudad) || string.IsNullOrEmpty(empresa))
                 {
-                   await DisplayAlert("Abrir", "Complete toda la Información", "Cerrar");
+                   await DisplayAlert("Error", "Complete toda la Información", "Cerrar");
                 }
                 else
                 { 
