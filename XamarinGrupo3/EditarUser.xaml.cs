@@ -61,7 +61,7 @@ namespace XamarinGrupo3
                 if (isUpdate)
                 {
                     await DisplayAlert("Información", "Registro se actualizo correctamente", "Cerrar");
-                    await Navigation.PushAsync(new DetallesUsuario());
+                    //await NavigationPage(DetallesUsuario());
                 }
                 else
                 {
