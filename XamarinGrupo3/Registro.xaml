@@ -14,7 +14,7 @@
 
 
 
-        <StackLayout BackgroundColor="DarkGray" Margin="10,10,10,10" Padding="10">
+        <StackLayout BackgroundColor="DarkGray" Margin="10,10,10,10" Padding="10" >
 
             <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
                 <Picker Title="Seleccione el Rol" x:Name="pUsuarios" SelectedIndexChanged="pUsuarios_SelectedIndexChanged">
