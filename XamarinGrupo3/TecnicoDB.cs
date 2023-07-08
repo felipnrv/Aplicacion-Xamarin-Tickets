@@ -45,7 +45,7 @@ namespace XamarinGrupo3
         }
         public async Task<bool> Update(TecnicoModelo tecnico)
         {
-            await firebaseClient.Child(nameof(TecnicoModelo) + "/" + tecnico.IdTecn).PutAsync(JsonConvert.SerializeObject(tecnico));
+            await firebaseClient.Child(nameof(TecnicoModelo) + "/" + tecnico.Id).PutAsync(JsonConvert.SerializeObject(tecnico));
             return true;
         }
         public async Task<bool> Borrar (string id)

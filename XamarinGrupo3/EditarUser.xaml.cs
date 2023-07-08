@@ -53,6 +53,7 @@ namespace XamarinGrupo3
                 usuario.cedulauser= Cedula;
                 usuario.ciudaduser= Ciudad;
                 usuario.telefonouser= Telefono;
+                
 
 
                 bool isUpdate = await usuarioDB.Update(usuario);

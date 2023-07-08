@@ -26,7 +26,7 @@ namespace XamarinGrupo3
         {
             return (await firebaseClient.Child(nameof(TicketModelo)).OnceAsync<TicketModelo>()).Select(item => new TicketModelo
             {
-                IdTicket=item.Object.IdTicket,
+                Id=item.Object.Id,
                 NombreTick=item.Object.NombreTick,
                 direcciontick=item.Object.direcciontick,
                 detalletick=item.Object.detalletick,
@@ -49,7 +49,7 @@ namespace XamarinGrupo3
         }
         public async Task<bool> Update(TicketModelo ticket)
         {
-            await firebaseClient.Child(nameof(TicketModelo) + "/" + ticket.IdTicket).PutAsync(JsonConvert.SerializeObject(ticket));
+            await firebaseClient.Child(nameof(TicketModelo) + "/" + ticket.Id).PutAsync(JsonConvert.SerializeObject(ticket));
             return true;
         }
         public async Task<bool> Borrar(string id)

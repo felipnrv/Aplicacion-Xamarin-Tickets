@@ -47,6 +47,7 @@ namespace XamarinGrupo3
                 ciudaduser=item.Object.ciudaduser,
                 telefonouser=item.Object.telefonouser,
                 roleuser =item.Object.roleuser,
+                Id=item.Key,
 
             }).ToList();
 
