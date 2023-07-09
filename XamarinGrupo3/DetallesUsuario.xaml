@@ -3,34 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinGrupo3.DetallesUsuario">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Nuevo" x:Name="AddNuevoUsuario" Clicked="AddNuevoUsuario_Clicked"/>
+      
+        <ToolbarItem Text="Nuevo Usuario"  Clicked="AddNuevoUsuario_Clicked"/>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <ListView x:Name="UsuarioLista" ItemsSource="{Binding usuario}"
+    <ContentPage.Content >
+
+       
+        <ListView  BackgroundColor="#0b3954"  x:Name="UsuarioLista"  SeparatorColor="White"  ItemsSource="{Binding usuario}"
                   HasUnevenRows="True" ItemTapped="UsuarioLista_ItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
+            <ListView.ItemTemplate  >
+                <DataTemplate >
                     <ViewCell>
+
                         <StackLayout Orientation="Horizontal" Padding="5">
-                            <Image Source="https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" HeightRequest="60" WidthRequest="60"/>
+
+                            <Frame BackgroundColor="AliceBlue" CornerRadius="50"  Padding="10" HorizontalOptions="Start" Margin="10">
+                                <Image Source="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" HeightRequest="60" WidthRequest="60"/>
+                                
+                            </Frame>
                             <StackLayout HorizontalOptions="StartAndExpand">
-                                <Label Text="{Binding nombreuser}" FontSize="Medium"/>
-                                <Label Text="{Binding apellidouser}" FontSize="Medium"/>
-                                <Label Text="{Binding telefonouser}" FontSize="Medium"/>
+                                <Label TextColor="White" Text="{Binding nombreuser}" FontSize="Medium"/>
+                                <Label TextColor="White" Text="{Binding apellidouser}" FontSize="Medium"/>
+                                <Label TextColor="White" Text="{Binding telefonouser}" FontSize="Medium"/>
+
+
                             </StackLayout>
                             <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
-                                <Image Source="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" HeightRequest="20" WidthRequest="30" >
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer x:Name="TapEditar" Tapped="TapEditar_Tapped" CommandParameter="{Binding Id}"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                                <Image Source="https://cdn-icons-png.flaticon.com/512/1214/1214594.png" HeightRequest="20" WidthRequest="30" >
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer x:Name="TapBorrar" Tapped="TapBorrar_Tapped" CommandParameter="{Binding Id}"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7">
+
+                                    <Image Source="https://cdn-icons-png.flaticon.com/512/269/269074.png">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer x:Name="TapEditar" Tapped="TapEditar_Tapped" CommandParameter="{Binding Id}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                </Frame>
+
+
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7">
+
+                                    <Image Source="https://cdn-icons-png.flaticon.com/512/3221/3221897.png">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer x:Name="TapBorrar" Tapped="TapBorrar_Tapped" CommandParameter="{Binding Id}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                </Frame>
+
+                               
                             </StackLayout>
                         </StackLayout>
+                       
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

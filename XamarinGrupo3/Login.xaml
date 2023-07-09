@@ -5,11 +5,11 @@
     <ContentPage.Content>
 
 
-        <StackLayout Padding="0" >
+        <StackLayout Padding="0" Background="#0b3954">
             <Grid>
 
                 <StackLayout Padding="0" Margin="0">
-                    <Frame BackgroundColor="Black" HeightRequest="130" HorizontalOptions="FillAndExpand">
+                    <Frame BackgroundColor="#0b3954" HeightRequest="130" HorizontalOptions="FillAndExpand">
 
                     </Frame>
                 </StackLayout>
@@ -20,7 +20,7 @@
                                 <Label Text=" Inicio de Sesion" TextColor="Black" FontSize="Medium" FontAttributes="Bold"></Label>
                             </StackLayout>
 
-                            <StackLayout Margin="0,25,0,0">
+                            <StackLayout Margin="0,25,0,0" >
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
 
                                     <StackLayout Orientation="Horizontal">
@@ -43,15 +43,15 @@
                             <StackLayout Orientation="Horizontal">
 
 
-                                <Button x:Name="btnRecuperarContrasena" Text="¿Olvidaste la contraseña?" BackgroundColor="DarkGray"  TextColor="White" HorizontalOptions="EndAndExpand" CornerRadius="30" FontAttributes="Bold" Clicked="btnRecuperarContrasena_Clicked"></Button>
+                                <Button x:Name="btnRecuperarContrasena" Text="¿Olvidaste la contraseña?" BackgroundColor="#087e8b" TextColor="White" HorizontalOptions="EndAndExpand" CornerRadius="30" FontAttributes="Bold" Clicked="btnRecuperarContrasena_Clicked"></Button>
 
                             </StackLayout>
-                            <Button Text="Iniciar Sesión" x:Name="btnIniciarSesion" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="btnIniciarSesion_Clicked"></Button>
+                            <Button Text="Iniciar Sesión" x:Name="btnIniciarSesion" BackgroundColor="#087e8b" TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="btnIniciarSesion_Clicked"></Button>
                             <StackLayout Orientation="Horizontal">
 
                                 <Label Text="¿No estas Registrado?" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"></Label>
 
-                                <Button Text="Registrate aquí" x:Name="btnRegistro" BackgroundColor="DarkGray" TextColor="White" FontAttributes="Bold" CornerRadius="30" HorizontalOptions="EndAndExpand" Clicked="btnRegistro_Clicked"></Button>
+                                <Button Text="Registrate aquí" x:Name="btnRegistro" BackgroundColor="#087e8b" TextColor="White" FontAttributes="Bold" CornerRadius="30" HorizontalOptions="EndAndExpand" Clicked="btnRegistro_Clicked"></Button>
 
                             </StackLayout>
 
