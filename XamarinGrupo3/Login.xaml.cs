@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Firebase.Auth;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,12 @@ namespace XamarinGrupo3
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-        public Login()
+        Registro aute = new Registro();
+        public Login(string nombre, string contrasena)
         {
             InitializeComponent();
-            
+            txtUsuario.Text = nombre;
+            txtContrasena.Text = contrasena;         
         }
 
         private void btnRecuperarContrasena_Clicked(object sender, EventArgs e)
@@ -49,6 +52,7 @@ namespace XamarinGrupo3
             Navigation.PushAsync(new Registro());
         }
 
-      
+       
     }
 }
+   

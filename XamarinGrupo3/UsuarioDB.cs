@@ -1,4 +1,5 @@
-﻿using Firebase.Database;
+﻿using Firebase.Auth;
+using Firebase.Database;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace XamarinGrupo3
    
     public class UsuarioDB
     {
+        
         //Se coloca la url de la realtimeDB Firebase 
         FirebaseClient firebaseClient = new FirebaseClient("https://fir-xamarin-213c2-default-rtdb.firebaseio.com/");
 
@@ -72,5 +74,19 @@ namespace XamarinGrupo3
             await firebaseClient.Child(nameof(UsuarioModelo) + "/" + id).DeleteAsync();
             return true;
         }
+        private const string key = "AIzaSyDOzceZLeN8q8hC0a-X0hkzZHAlQ9nUVsI";
+        FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig(key));
+        public async Task<bool> Autenticacion(string usuario, string contrasena)
+        {
+            var token = await authProvider.CreateUserWithEmailAndPasswordAsync(usuario, contrasena);
+            if (!string.IsNullOrEmpty(token.FirebaseToken))
+            {
+                return true;
+            }
+            return false;
+            }
+      
+
+
     }
 }

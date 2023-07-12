@@ -76,10 +76,14 @@
                     <Entry x:Name="txtEmpresa" Placeholder="Ingrese su Empresa"  IsVisible="false"/>
                 </Frame>
             </Grid>
+        <Grid RowDefinitions="*">
+            <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="txtContrasena" Placeholder="Ingrese su Contrasena"/>
+            </Frame>
+        </Grid>
 
 
-        
-            
+
 
         <StackLayout Margin="0" Padding="10">
             <Button x:Name="btnRegistro" Text="Registrarse" BackgroundColor="White"  TextColor="Black"   CornerRadius="30" Clicked="btnRegistro_Clicked"/>

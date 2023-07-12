@@ -18,6 +18,8 @@ namespace XamarinGrupo3
         public string generotecn { get; set; }
         public string roletec { get; set; }
 
+        public string contrasena { get; set; }
+
     }
 
     public class UsuarioModelo
@@ -31,6 +33,8 @@ namespace XamarinGrupo3
         public string ciudaduser { get; set; }
         public string telefonouser { get; set; }
         public string roleuser { get; set; }
+        public string contrasena { get; set; }
+
     }
 
     public class TicketModelo

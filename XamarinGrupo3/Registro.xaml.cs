@@ -51,6 +51,7 @@ namespace XamarinGrupo3
             string telefono = txtTelefono.Text;
             string ciudad = txtCiudad.Text;
             string empresa = txtEmpresa.Text;
+            string contrasena = txtContrasena.Text;
 
             if (pUsuarios.SelectedIndex == 1)
             {
@@ -118,6 +119,7 @@ namespace XamarinGrupo3
                     }
                 }
             }
+           await Navigation.PushAsync(new Login(nombre, contrasena));
 
         }
 
@@ -125,5 +127,7 @@ namespace XamarinGrupo3
         {
             
         }
+
+
     }
 }
