@@ -21,7 +21,7 @@
                     </Picker.Items>
                 </Picker>
             </Frame>
-
+            
             <Frame CornerRadius="50"   BorderColor="Black"  Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
                 <Entry x:Name="txtNombre"  Placeholder="Ingrese su Nombre"></Entry>
             </Frame>
@@ -86,10 +86,13 @@
                     <Entry x:Name="txtEmpresa" Placeholder="Ingrese su Empresa"  IsVisible="false"/>
                 </Frame>
             </Grid>
-        
-        
-
-
+        <StackLayout Margin="0" Padding="10">
+            <Button x:Name="btnElegImg" Text="Elegir Imagen" BackgroundColor="Azure"  TextColor="Black"   CornerRadius="30" Clicked="btnElegImg_Clicked"/>
+            <Image x:Name="imgFoto" />
+        </StackLayout>
+        <StackLayout Margin="0" Padding="10">
+            <Button x:Name="btnTakeImg" Text="Tomar Foto" BackgroundColor="Azure"  TextColor="Black"   CornerRadius="30" Clicked="btnTakeImg_Clicked"/>
+        </StackLayout>
 
 
         <StackLayout Margin="0" Padding="10">

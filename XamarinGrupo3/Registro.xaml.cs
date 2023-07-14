@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,6 +24,7 @@ namespace XamarinGrupo3
         }
 
         private void pUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+
         {
             if (pUsuarios.SelectedIndex == 1)
             {
@@ -149,6 +150,23 @@ namespace XamarinGrupo3
             
         }
 
+        private async void btnTakeImg_Clicked(object sender, EventArgs e)
+        {
+            var tomarfoto = await MediaPicker.CapturePhotoAsync();
+            var stream = await tomarfoto.OpenReadAsync();
+            imgFoto.Source=ImageSource.FromStream(()=> stream);
+        }
 
+
+        async void btnElegImg_Clicked(object sender, EventArgs e)
+        {
+            var imagen = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+            {
+                Title="Escoga una foto"
+
+            });
+            var stream = await imagen.OpenReadAsync();
+            imgFoto.Source=ImageSource.FromStream(()=> stream);
+        }
     }
 }
