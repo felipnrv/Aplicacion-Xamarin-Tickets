@@ -11,7 +11,7 @@ namespace XamarinGrupo3
             InitializeComponent();
 
             //Navegar entre paginas
-            MainPage = new NavigationPage(new Registro());
+            MainPage = new NavigationPage(new Login("",""));
         }
 
         protected override void OnStart()
