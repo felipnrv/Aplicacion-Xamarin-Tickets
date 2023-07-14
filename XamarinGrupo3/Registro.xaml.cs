@@ -25,8 +25,9 @@ namespace XamarinGrupo3
             {
                 
                 txtEmpresa.IsVisible = true;
-                lblEmpresa.IsVisible = true; 
-                
+                lblEmpresa.IsVisible = true;
+                fEmpresa.IsVisible = true;
+                fEmpresa.ForceLayout();
               
                 
             }
@@ -35,9 +36,12 @@ namespace XamarinGrupo3
                
                 txtEmpresa.IsVisible = false;
                 lblEmpresa.IsVisible = false;
-                
-                
-                
+                fEmpresa.IsVisible = false;
+                fEmpresa.ForceLayout();
+
+
+
+
             }
         }
 

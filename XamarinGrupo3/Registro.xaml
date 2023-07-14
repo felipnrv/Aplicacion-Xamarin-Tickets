@@ -67,20 +67,27 @@
                     <Entry x:Name="txtCiudad" Placeholder="Ingrese su Ciudad"/>
                 </Frame>
             </Grid>
+        <Grid>
+            <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="txtContrasena" Placeholder="Ingrese su Contraseña"/>
+            </Frame>
+        </Grid>
+        <Grid>
+            <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="txtCorreo" Placeholder="Ingrese su Correo electrónico"/>
+            </Frame>
+        </Grid>
 
-            <Grid RowDefinitions="*,*" >
+        <Grid RowDefinitions="*,*" >
 
                 <Label x:Name="lblEmpresa" IsVisible="false"/>
 
-                <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
+                <Frame x:Name="fEmpresa"  IsVisible="false" CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
                     <Entry x:Name="txtEmpresa" Placeholder="Ingrese su Empresa"  IsVisible="false"/>
                 </Frame>
             </Grid>
-        <Grid RowDefinitions="*">
-            <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
-                <Entry x:Name="txtContrasena" Placeholder="Ingrese su Contrasena"/>
-            </Frame>
-        </Grid>
+        
+        
 
 
 
