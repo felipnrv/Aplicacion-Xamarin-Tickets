@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Firebase.Auth;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace XamarinGrupo3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class Registro : ContentPage
+
     {
+        public  string key = "AIzaSyDOzceZLeN8q8hC0a-X0hkzZHAlQ9nUVsI";
         UsuarioDB usuariodb = new UsuarioDB();
         TecnicoDB guardarTecn = new TecnicoDB();
         public Registro()
@@ -45,8 +49,21 @@ namespace XamarinGrupo3
             }
         }
 
-        private async void btnRegistro_Clicked(object sender, EventArgs e)
+         async void btnRegistro_Clicked(object sender, EventArgs e)
         {
+          try
+            {
+                var authProvider = new FirebaseAuthProvider(new FirebaseConfig(key));
+                var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(txtCorreo.Text, txtContrasena.Text);
+                string gett = auth.FirebaseToken;
+                await App.Current.MainPage.DisplayAlert("Alerta", gett, "Ok");
+
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Alerta", ex.Message, "Ok");
+            }
+
 
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
@@ -123,9 +140,9 @@ namespace XamarinGrupo3
                     }
                 }
             }
-           await Navigation.PushAsync(new Login(nombre, contrasena));
-
-        }
+           await Navigation.PushAsync(new Login());
+            
+    }
 
         private void pGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
