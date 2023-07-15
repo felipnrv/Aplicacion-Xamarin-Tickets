@@ -88,11 +88,12 @@
             </Grid>
         <StackLayout Margin="0" Padding="10">
             <Button x:Name="btnElegImg" Text="Elegir Imagen" BackgroundColor="Azure"  TextColor="Black"   CornerRadius="30" Clicked="btnElegImg_Clicked"/>
-            <Image x:Name="imgFoto" />
+            
         </StackLayout>
         <StackLayout Margin="0" Padding="10">
             <Button x:Name="btnTakeImg" Text="Tomar Foto" BackgroundColor="Azure"  TextColor="Black"   CornerRadius="30" Clicked="btnTakeImg_Clicked"/>
         </StackLayout>
+        <Image x:Name="imgFoto" HeightRequest="30" WidthRequest="30"/>
 
 
         <StackLayout Margin="0" Padding="10">

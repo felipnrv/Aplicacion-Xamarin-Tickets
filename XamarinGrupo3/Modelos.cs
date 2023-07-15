@@ -19,7 +19,7 @@ namespace XamarinGrupo3
         public string roletec { get; set; }
 
         public string contrasena { get; set; }
-
+        public string image { get; set; }
     }
 
     public class UsuarioModelo
@@ -34,6 +34,7 @@ namespace XamarinGrupo3
         public string telefonouser { get; set; }
         public string roleuser { get; set; }
         public string contrasena { get; set; }
+        public string image { get; set; }
 
     }
 
@@ -50,5 +51,6 @@ namespace XamarinGrupo3
         public string serie { set; get; }
         public string estado { set; get; }
         public DateTime fecha { set; get;}
+        public string image { get; set; }
     }
 }

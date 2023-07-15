@@ -1,7 +1,9 @@
 ﻿using Firebase.Database;
+using Firebase.Storage;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,7 @@ namespace XamarinGrupo3
 {
     public class TicketsDB
     {
+        FirebaseStorage firebaseStorage = new FirebaseStorage("fir-xamarin-213c2.appspot.com");
         FirebaseClient firebaseClient = new FirebaseClient("https://fir-xamarin-213c2-default-rtdb.firebaseio.com/");
 
         public async Task<bool> GuardarTicket(TicketModelo ticket)
@@ -58,6 +61,11 @@ namespace XamarinGrupo3
             return true;
         }
 
+        public async Task<string> Subir(Stream img, string filenomb)
+        {
+            var image = await firebaseStorage.Child("Imagen").Child(filenomb).PutAsync(img);
+            return image;
+        }
 
     }
 }

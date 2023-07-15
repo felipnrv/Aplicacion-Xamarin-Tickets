@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plugin.Media.Abstractions;
+using Plugin.Media;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +8,19 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.IO;
 
 namespace XamarinGrupo3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistroTicketEditar : ContentPage
     {
+        MediaFile file;
         TicketsDB ticketsDB = new TicketsDB();
         public RegistroTicketEditar(TicketModelo ticket)
         {
+
+            
             InitializeComponent();
             txtNombreTicket.Text = ticket.NombreTick;
             txtDireccion.Text = ticket.direcciontick;
@@ -61,19 +67,50 @@ namespace XamarinGrupo3
                 ticket.actsolucion = actrlz;
                 ticket.Id = id;
 
+                if(file!=null)
+                {
+                    string imagen = await ticketsDB.Subir(file.GetStream(), Path.GetFileName(file.Path));
+                    ticket.image = imagen;
+                }
+
                 bool isUpdate = await ticketsDB.Update(ticket);
                 if (isUpdate)
                 {
                     await DisplayAlert("Información", "Registro se actualizo correctamente", "Cerrar");
-                    await Navigation.PushAsync(new DetallesTicket());
+                    
                 }
                 else
                 {
                     await DisplayAlert("Error", "Fallo en la edicion no se guardo correctamente", "Cerrar");
 
                 }
-
+                await Navigation.PushModalAsync(new DetallesTicket());
             }
         }
-    }
+
+        private async void ImgTap_Tapped(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+            try
+            {
+               file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+            {
+               PhotoSize = PhotoSize.Medium
+            });
+            if (file == null)
+            {
+               return;
+            }
+            ImgTicket.Source = ImageSource.FromStream(() =>
+            {
+                return file.GetStream();
+            });
+            }
+            catch (Exception ex)
+            {
+
+            }
+            }
+        }
+    
 }

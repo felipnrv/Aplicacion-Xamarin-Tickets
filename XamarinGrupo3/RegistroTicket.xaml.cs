@@ -1,17 +1,22 @@
-﻿using System;
+﻿using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace XamarinGrupo3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class RegistroTicket : ContentPage
     {
+        MediaFile file;
         //Se usa para acceder a la clase TicketsDB 
         //Se inicializa como nueva instancia(objeto de una clase especifica)
         TicketsDB Guardtickets = new TicketsDB();
@@ -50,6 +55,12 @@ namespace XamarinGrupo3
                 ticket.fecha = fechatck;
                 ticket.actsolucion = actrlz;
 
+                if (file != null)
+                {
+                    string imagen = await Guardtickets.Subir(file.GetStream(), Path.GetFileName(file.Path));
+                    ticket.image = imagen;
+                }
+
                 var guardar = await Guardtickets.GuardarTicket(ticket);
                 if (guardar)
                 {
@@ -62,6 +73,24 @@ namespace XamarinGrupo3
                 }
             }
 
+        }
+
+        private async void btnElegImg_Clicked(object sender, EventArgs e)
+        {
+            var tomarfoto = await MediaPicker.CapturePhotoAsync();
+            var stream = await tomarfoto.OpenReadAsync();
+            imgFoto.Source = ImageSource.FromStream(() => stream);
+        }
+
+        private async void btnTakeImg_Clicked(object sender, EventArgs e)
+        {
+            var imagen = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+            {
+                Title = "Escoga una foto"
+
+            });
+            var stream = await imagen.OpenReadAsync();
+            imgFoto.Source = ImageSource.FromStream(() => stream);
         }
     }
 }
