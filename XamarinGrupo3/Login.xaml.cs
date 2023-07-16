@@ -36,8 +36,7 @@ namespace XamarinGrupo3
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                await DisplayAlert("Alerta", "exito", "cerrar");
+           
             }
            
         }
@@ -47,7 +46,7 @@ namespace XamarinGrupo3
 
         }
 
-        private async void btnIniciarSesion_Clicked(object sender, EventArgs e)
+        private void btnIniciarSesion_Clicked(object sender, EventArgs e)
         {
             //if (txtUsuario.Text == "user" && txtContrasena.Text=="123" )
             // {

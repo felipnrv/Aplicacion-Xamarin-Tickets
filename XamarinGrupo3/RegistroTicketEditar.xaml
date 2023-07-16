@@ -4,7 +4,7 @@
              x:Class="XamarinGrupo3.RegistroTicketEditar">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Ventana de Edicion de Tikcets" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Metropolis" TextColor="DarkGray"></Label>
+            <Label Text="Ventana de Edicion de Tickcets" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Metropolis" TextColor="DarkGray"></Label>
 
             <Label Text="Agrega los respectivos Datos " HorizontalTextAlignment="Center" Margin="0,10,0,0" HorizontalOptions="Center" FontSize="15" FontFamily="Metropolis"></Label>
 

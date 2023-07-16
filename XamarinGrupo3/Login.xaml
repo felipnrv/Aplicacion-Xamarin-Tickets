@@ -62,29 +62,9 @@
 
                             </StackLayout>
 
-                            <StackLayout>
+                    
 
-                                <Grid>
-                                    <BoxView BackgroundColor="DarkGray" HeightRequest="1" Margin="50" HorizontalOptions="CenterAndExpand" WidthRequest="130"></BoxView>
-                                    <Frame BackgroundColor="White" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="30" HasShadow="False" BorderColor="DarkGray" VerticalOptions="Center" HorizontalOptions="Center">
-                                        <Label Text=" OR" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="Center" FontAttributes="Bold" VerticalTextAlignment="Center" ></Label>
-
-                                    </Frame>
-                                </Grid>
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                    <Frame BackgroundColor="White" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="30" HasShadow="False"  >
-                                        <Image Source="https://www.facebook.com/images/fb_icon_325x325.png" Aspect="AspectFill"></Image>
-
-
-                                    </Frame>
-                                    <Frame BackgroundColor="White" WidthRequest="50" Padding="0" Margin="0" HeightRequest="50" CornerRadius="30" HasShadow="False"  >
-                                        <Image Source="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI" Aspect="AspectFill"></Image>
-
-
-                                    </Frame>
-                                </StackLayout>
-
-                            </StackLayout>
+                           
                         </StackLayout>
 
                     </Frame>

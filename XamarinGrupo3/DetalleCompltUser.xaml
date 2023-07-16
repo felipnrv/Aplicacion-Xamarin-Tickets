@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Info de usuarios" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
-            <Label x:Name="txtID" FontSize="Medium"/>
+           
             <Label x:Name="txtNombreUser" FontSize="Medium"/>
             <Label x:Name="txtApellido" FontSize="Medium"/>
             <Label x:Name="txtedad" FontSize="Medium" />

@@ -15,7 +15,7 @@ namespace XamarinGrupo3
         public DetalleCompltUser(UsuarioModelo usuario)
         {
             InitializeComponent();
-            txtID.Text = usuario.Id;
+            
             txtNombreUser.Text = usuario.nombreuser;
             txtApellido.Text = usuario.apellidouser;
             txtedad.Text = usuario.edaduser.ToString();

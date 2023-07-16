@@ -57,12 +57,12 @@ namespace XamarinGrupo3
                 var authProvider = new FirebaseAuthProvider(new FirebaseConfig(key));
                 var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(txtCorreo.Text, txtContrasena.Text);
                 string gett = auth.FirebaseToken;
-                await App.Current.MainPage.DisplayAlert("Alerta", gett, "Ok");
+                
 
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Alerta", ex.Message, "Ok");
+                await DisplayAlert("Alerta", "Datos ingresados Incorrectamente, ingrese un Correo y una contraseña validos", "Ok");
             }
 
 

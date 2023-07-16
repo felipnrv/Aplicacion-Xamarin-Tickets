@@ -71,8 +71,9 @@ namespace XamarinGrupo3
                     await DisplayAlert("Error", "El registro no se guardo correctamente", "Cerrar");
 
                 }
+              
             }
-
+            await Navigation.PushAsync(new DetallesTicket());
         }
 
         private async void btnElegImg_Clicked(object sender, EventArgs e)

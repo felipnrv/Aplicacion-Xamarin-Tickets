@@ -2,6 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinGrupo3.Registro" Title="Registro Usuario/Tecnico">
+    
+    <ScrollView>
+        
+   
     <StackLayout BackgroundColor="#0b3954" Padding="5">
 
 
@@ -81,6 +85,7 @@
                     <Entry x:Name="txtEmpresa" Placeholder="Ingrese su Empresa"  IsVisible="false"/>
                 </Frame>
             </Grid>
+        
         <StackLayout Margin="0" Padding="10">
             <Button x:Name="btnElegImg" Text="Elegir Imagen" BackgroundColor="Azure"  TextColor="Black"   CornerRadius="30" Clicked="btnElegImg_Clicked"/>
             
@@ -88,14 +93,15 @@
         <StackLayout Margin="0" Padding="10">
             <Button x:Name="btnTakeImg" Text="Tomar Foto" BackgroundColor="Azure"  TextColor="Black"   CornerRadius="30" Clicked="btnTakeImg_Clicked"/>
         </StackLayout>
-        <Image x:Name="imgFoto" HeightRequest="30" WidthRequest="30"/>
+        <Image x:Name="imgFoto" HeightRequest="100" WidthRequest="60"/>
 
-
-        <StackLayout Margin="0" Padding="10">
-            <Button x:Name="btnRegistro" Text="Registrarse" BackgroundColor="White"  TextColor="Black"   CornerRadius="30" Clicked="btnRegistro_Clicked"/>
-        </StackLayout>
+            <Grid RowDefinitions="*,*,*">
+                <StackLayout Margin="0" Padding="10">
+                    <Button x:Name="btnRegistro" Text="Registrarse" BackgroundColor="White"  TextColor="Black"   CornerRadius="30" Clicked="btnRegistro_Clicked"/>
+                </StackLayout>
+            </Grid>
+       
             
-        
     </StackLayout>
-
+    </ScrollView>
 </ContentPage>
