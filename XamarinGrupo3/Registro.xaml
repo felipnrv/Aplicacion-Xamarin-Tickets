@@ -8,11 +8,6 @@
         <Label Text="REGISTRO" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Metropolis"  FontAttributes="Bold" TextColor="White"></Label>
         <Label Text="Agrega tus datos para iniciar sesión" HorizontalTextAlignment="Center" Margin="0,10,0,0" TextColor="White" HorizontalOptions="Center" FontSize="15" FontFamily="Metropolis"></Label>
 
-
-
-
-
-
         <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
                 <Picker Title="Seleccione el Rol" x:Name="pUsuarios" SelectedIndexChanged="pUsuarios_SelectedIndexChanged">
                     <Picker.Items>

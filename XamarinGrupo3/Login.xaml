@@ -19,10 +19,17 @@
                             <StackLayout HorizontalOptions="CenterAndExpand">
                                 <Label Text=" Inicio de Sesion" TextColor="Black" FontSize="Medium" FontAttributes="Bold"></Label>
                             </StackLayout>
-
+                            <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
+                                <Picker Title="Seleccione el Rol" x:Name="pRol" SelectedIndexChanged="pUsuarios_SelectedIndexChanged">
+                                    <Picker.Items>
+                                        <x:String>Usuario</x:String>
+                                        <x:String>Tecnico</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Frame>
                             <StackLayout Margin="0,25,0,0" >
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
-
+                                    
                                     <StackLayout Orientation="Horizontal">
                                         <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7">
                                             <Image Source="https://img.freepik.com/iconos-gratis/usuario_318-552176.jpg?w=2000"></Image>

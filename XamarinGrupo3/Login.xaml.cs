@@ -32,6 +32,7 @@ namespace XamarinGrupo3
                 Preferences.Set("datostoke1",JsonConvert.SerializeObject(refrescar));
                 txtUsuario.Text = salvar.User.Email;
                 
+                
             }
             catch (Exception ex)
             {
@@ -48,24 +49,44 @@ namespace XamarinGrupo3
 
         private async void btnIniciarSesion_Clicked(object sender, EventArgs e)
         {
-           //if (txtUsuario.Text == "user" && txtContrasena.Text=="123" )
-           // {
-           //     await Navigation.PushAsync(new DetallesUsuario());
-           // }
-           // if (txtUsuario.Text == "tecn" && txtContrasena.Text == "456") 
-           // { 
-           //     await Navigation.PushAsync (new DetallesTicket());
-           // }
-           //if (txtContrasena.Text != "456" && txtContrasena.Text != "123")
-           // {
-           //     await DisplayAlert("", "Error", "Cerrar");
-           // }
-           // if (txtUsuario.Text != "tecn" && txtUsuario.Text != "user")
-           // {
-           //     await DisplayAlert("", "Error", "Cerrar");
-           // }
+            //if (txtUsuario.Text == "user" && txtContrasena.Text=="123" )
+            // {
+            //     await Navigation.PushAsync(new DetallesUsuario());
+            // }
+            // if (txtUsuario.Text == "tecn" && txtContrasena.Text == "456") 
+            // { 
+            //     await Navigation.PushAsync (new DetallesTicket());
+            // }
+            //if (txtContrasena.Text != "456" && txtContrasena.Text != "123")
+            // {
+            //     await DisplayAlert("", "Error", "Cerrar");
+            // }
+            // if (txtUsuario.Text != "tecn" && txtUsuario.Text != "user")
+            // {
+            //     await DisplayAlert("", "Error", "Cerrar");
+            // }
+            
            Preferences.Remove("datostoke1");
-            App.Current.MainPage=new NavigationPage(new DetallesTicket());
+            //if(string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text) )
+            //{
+                
+            //    await DisplayAlert("Alerta","Ingrese usuario o contraseña","X");
+            //}
+            //else
+            //{
+            if (pRol.SelectedIndex == 1)
+               {
+                    
+                    App.Current.MainPage = new NavigationPage(new DetallesTicket());
+
+               }
+            else
+               { 
+                  App.Current.MainPage = new NavigationPage(new DetallesUsuario());
+               }
+            //}
+            
+            
         }
 
         private void btnRegistro_Clicked(object sender, EventArgs e)
@@ -73,7 +94,10 @@ namespace XamarinGrupo3
             Navigation.PushAsync(new Registro());
         }
 
-       
+        private void pUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
    
