@@ -18,75 +18,33 @@ namespace XamarinGrupo3
         Registro aute = new Registro();
         public Login()
         {
-            InitializeComponent();
-            Auteo();
-                
+            InitializeComponent();  
         }
-        private async void Auteo()
-        {
-            var authProvider = new FirebaseAuthProvider(new FirebaseConfig(key));
-            try
-            {
-                var salvar = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("datostoken1",""));
-                var refrescar = await authProvider.RefreshAuthAsync(salvar);
-                Preferences.Set("datostoke1",JsonConvert.SerializeObject(refrescar));
-                txtUsuario.Text = salvar.User.Email;
-                
-                
-            }
-            catch (Exception ex)
-            {
-           
-            }
-           
-        }
-
+        
         private void btnRecuperarContrasena_Clicked(object sender, EventArgs e)
         {
 
         }
 
-        private void btnIniciarSesion_Clicked(object sender, EventArgs e)
+        private async void btnIniciarSesion_Clicked(object sender, EventArgs e)
         {
-            //if (txtUsuario.Text == "user" && txtContrasena.Text=="123" )
-            // {
-            //     await Navigation.PushAsync(new DetallesUsuario());
-            // }
-            // if (txtUsuario.Text == "tecn" && txtContrasena.Text == "456") 
-            // { 
-            //     await Navigation.PushAsync (new DetallesTicket());
-            // }
-            //if (txtContrasena.Text != "456" && txtContrasena.Text != "123")
-            // {
-            //     await DisplayAlert("", "Error", "Cerrar");
-            // }
-            // if (txtUsuario.Text != "tecn" && txtUsuario.Text != "user")
-            // {
-            //     await DisplayAlert("", "Error", "Cerrar");
-            // }
-            
-           Preferences.Remove("datostoke1");
-            Navigation.PushAsync(new Rol());
-            //if(string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text) )
-            //{
-                
-            //    await DisplayAlert("Alerta","Ingrese usuario o contraseña","X");
-            //}
-            //else
-            //{
-            //if (pRol.SelectedIndex == 1)
-            //   {
-                    
-            //        App.Current.MainPage = new NavigationPage(new DetallesTicket());
 
-            //   }
-            //else
-            //   { 
-            //      App.Current.MainPage = new NavigationPage(new DetallesUsuario());
-            //   }
-            //}
-            
-            
+            var authProvider = new FirebaseAuthProvider(new FirebaseConfig(key));
+            try
+            {
+
+                var auth = await authProvider.SignInWithEmailAndPasswordAsync(txtUsuario.Text, txtContrasena.Text);
+                var credenc = await auth.GetFreshAuthAsync();
+                var contenido = JsonConvert.SerializeObject(credenc);
+                Preferences.Set("datostoken", contenido);
+                await Navigation.PushAsync(new Rol());
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Alerta", "Usuario o Contraseña erroneo", "X");
+            }
+
         }
 
         private void btnRegistro_Clicked(object sender, EventArgs e)
