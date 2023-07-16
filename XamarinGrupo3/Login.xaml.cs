@@ -66,6 +66,7 @@ namespace XamarinGrupo3
             // }
             
            Preferences.Remove("datostoke1");
+            Navigation.PushAsync(new Rol());
             //if(string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text) )
             //{
                 
@@ -73,16 +74,16 @@ namespace XamarinGrupo3
             //}
             //else
             //{
-            if (pRol.SelectedIndex == 1)
-               {
+            //if (pRol.SelectedIndex == 1)
+            //   {
                     
-                    App.Current.MainPage = new NavigationPage(new DetallesTicket());
+            //        App.Current.MainPage = new NavigationPage(new DetallesTicket());
 
-               }
-            else
-               { 
-                  App.Current.MainPage = new NavigationPage(new DetallesUsuario());
-               }
+            //   }
+            //else
+            //   { 
+            //      App.Current.MainPage = new NavigationPage(new DetallesUsuario());
+            //   }
             //}
             
             
@@ -94,6 +95,11 @@ namespace XamarinGrupo3
         }
 
         private void pUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pRol_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
