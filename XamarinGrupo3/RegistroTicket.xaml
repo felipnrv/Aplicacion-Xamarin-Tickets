@@ -33,19 +33,19 @@
             </Frame>
 
             <Frame CornerRadius="50"   BorderColor="Black"  Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
-                <Entry x:Name="txtDetSol" Placeholder="Ingrese su Cedula"/>
+                <Entry x:Name="txtDetSol" Placeholder="Ingrese la Marca"/>
             </Frame>
             
             <Frame CornerRadius="50"   BorderColor="Black"  Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
-                <Entry x:Name="txtMarca" Placeholder="Ingrese su Numero Celular"/>
+                <Entry x:Name="txtMarca" Placeholder="Ingrese el Modelo"/>
             </Frame>
 
             <Frame CornerRadius="50"   BorderColor="Black"  Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
-                <Entry x:Name="txtModelo" Placeholder="Ingrese su Ciudad"/>
+                <Entry x:Name="txtModelo" Placeholder="Ingrese La serie"/>
             </Frame>
 
             <Frame CornerRadius="50"   BorderColor="Black"  Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
-                <Entry x:Name="txtSerie" Placeholder="Ingrese su Empresa"/>
+                <Entry x:Name="txtSerie" Placeholder="Ingrese la Solucion"/>
             </Frame>
 
 

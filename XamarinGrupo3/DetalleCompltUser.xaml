@@ -3,17 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinGrupo3.DetalleCompltUser">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Info de usuarios" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
+        <StackLayout BackgroundColor="#0b3954" Padding="5">
+            <Label Text="INFORMACION DE LOS USUARIOS" FontSize="30" HorizontalTextAlignment="Center" FontFamily="Metropolis"  FontAttributes="Bold" TextColor="White"/>
+
+
            
-            <Label x:Name="txtNombreUser" FontSize="Medium"/>
-            <Label x:Name="txtApellido" FontSize="Medium"/>
-            <Label x:Name="txtedad" FontSize="Medium" />
-            <Label x:Name="txtgenero" FontSize="Medium" />
-            <Label x:Name="txtcedula" FontSize="Medium"/>
-            <Label x:Name="txtciudad" FontSize="Medium" />
-            <Label x:Name="txttelefono" FontSize="Medium" />
-            
+            <Grid  BackgroundColor="Transparent" Margin="10" Padding="20">
+                <Grid.RowDefinitions >
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label TextColor="White" Text="NOMBRE:" FontSize="Medium" Grid.Row="0" Grid.Column="0"/>
+                <Label TextColor="White" Text="APELLIDO:" FontSize="Medium" Grid.Row="1" Grid.Column="0"/>
+                <Label TextColor="White" Text="EDAD:" FontSize="Medium" Grid.Row="2" Grid.Column="0"/>
+                <Label TextColor="White" Text="GENERO:" FontSize="Medium" Grid.Row="3" Grid.Column="0"/>
+                <Label TextColor="White" Text="CEDULA:" FontSize="Medium" Grid.Row="4" Grid.Column="0"/>
+                <Label TextColor="White" Text="CIUDAD:" FontSize="Medium" Grid.Row="5" Grid.Column="0"/>
+                <Label TextColor="White" Text="TELEFONO:" FontSize="Medium" Grid.Row="6" Grid.Column="0"/>
+
+                <Label  TextColor="White" x:Name="txtNombreUser" FontSize="Medium" Grid.Row="0" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtApellido" FontSize="Medium" Grid.Row="1" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtedad" FontSize="Medium"  Grid.Row="2" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtgenero" FontSize="Medium" Grid.Row="3" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtcedula" FontSize="Medium" Grid.Row="4" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtciudad" FontSize="Medium"  Grid.Row="5" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txttelefono" FontSize="Medium"  Grid.Row="6" Grid.Column="1"/>
+
+                </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

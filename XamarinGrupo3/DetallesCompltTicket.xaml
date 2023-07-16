@@ -3,19 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinGrupo3.DetallesCompletos" Title="Informacion detallada">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Info de tickets" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
-            
-            <Label x:Name="txtID" FontSize="Medium"/>
-            <Label x:Name="txtNombre" FontSize="Medium"/>
-            <Label x:Name="txtFecha" FontSize="Medium"/>
-            <Label x:Name="txtMarca" FontSize="Medium"/>
-            <Label x:Name="txtModelo" FontSize="Medium"/>
-            <Label x:Name="txtSerie" FontSize="Medium"/>
-            <Label x:Name="txtdirecciontick" FontSize="Medium"/>
-            <Label x:Name="detalletick" FontSize="Medium"/>
-            <Label x:Name="actsolucion" FontSize="Medium"/>
-            <Label x:Name="detsolucion" FontSize="Medium"/>
+        <StackLayout BackgroundColor="#0b3954" Padding="5">
+            <Label Text="INFORMACION DE LOS Tickets" FontSize="30" HorizontalTextAlignment="Center" FontFamily="Metropolis"  FontAttributes="Bold" TextColor="White"/>
+
+
+
+            <Grid  Margin="10" Padding="20">
+                <Grid.RowDefinitions >
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label TextColor="White" Text="ID:" FontSize="Medium" Grid.Row="0" Grid.Column="0"/>
+                <Label TextColor="White" Text=" NOMBRE:" FontSize="Medium" Grid.Row="1" Grid.Column="0"/>
+                <Label TextColor="White" Text="FECHA:" FontSize="Medium" Grid.Row="2" Grid.Column="0"/>
+                <Label TextColor="White" Text="MARCA:" FontSize="Medium" Grid.Row="3" Grid.Column="0"/>
+                <Label TextColor="White" Text="MODELO:" FontSize="Medium" Grid.Row="4" Grid.Column="0"/>
+                <Label TextColor="White" Text="SERIE:" FontSize="Medium" Grid.Row="5" Grid.Column="0"/>
+                <Label TextColor="White" Text="DIRECCION TICKET:" FontSize="Medium" Grid.Row="6" Grid.Column="0"/>
+                <Label TextColor="White" Text="DETALLE TICKET:" FontSize="Medium" Grid.Row="7" Grid.Column="0"/>
+                <Label TextColor="White" Text="SOLUCION:" FontSize="Medium" Grid.Row="8" Grid.Column="0"/>
+                <Label TextColor="White" Text="DETALLE DE LA SOLUCION:" FontSize="Medium" Grid.Row="9" Grid.Column="0"/>
+
+                <Label TextColor="White" x:Name="txtID" FontSize="Medium" Grid.Row="0" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtNombre" FontSize="Medium" Grid.Row="1" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtFecha" FontSize="Medium" Grid.Row="2" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtMarca" FontSize="Medium" Grid.Row="3" Grid.Column="1"/>
+                <Label  TextColor="White" x:Name="txtModelo" FontSize="Medium" Grid.Row="4" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtSerie" FontSize="Medium" Grid.Row="5" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="txtdirecciontick" FontSize="Medium" Grid.Row="6" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="detalletick" FontSize="Medium" Grid.Row="7" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="actsolucion" FontSize="Medium" Grid.Row="8" Grid.Column="1"/>
+                <Label TextColor="White" x:Name="detsolucion" FontSize="Medium" Grid.Row="9" Grid.Column="1"/>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
