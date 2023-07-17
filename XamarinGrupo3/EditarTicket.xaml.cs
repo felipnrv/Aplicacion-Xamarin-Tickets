@@ -70,7 +70,7 @@ namespace XamarinGrupo3
                 if(file!=null)
                 {
                     string imagen = await ticketsDB.Subir(file.GetStream(), Path.GetFileName(file.Path));
-                    ticket.image = imagen;
+                    ticket.imagen = imagen;
                 }
 
                 bool isUpdate = await ticketsDB.Update(ticket);
@@ -110,7 +110,7 @@ namespace XamarinGrupo3
             {
 
             }
-            }
+          }
         }
     
 }

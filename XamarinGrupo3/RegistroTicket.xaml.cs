@@ -1,4 +1,5 @@
-﻿using Plugin.Media;
+﻿using Firebase.Storage;
+using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,7 @@ namespace XamarinGrupo3
             string marca = txtMarca.Text;
             string modelo = txtModelo.Text;
             string serie = txtSerie.Text;
+            
 
             if(string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(detalletck) || fechatck==DateTime.MinValue ||fechatck==null || string.IsNullOrEmpty(actrlz) || string.IsNullOrEmpty(detallesol) || string.IsNullOrEmpty(marca) || string.IsNullOrEmpty(modelo) || string.IsNullOrEmpty(serie))
             {
@@ -58,7 +60,7 @@ namespace XamarinGrupo3
                 if (file != null)
                 {
                     string imagen = await Guardtickets.Subir(file.GetStream(), Path.GetFileName(file.Path));
-                    ticket.image = imagen;
+                    ticket.imagen = imagen;
                 }
 
                 var guardar = await Guardtickets.GuardarTicket(ticket);
@@ -78,20 +80,39 @@ namespace XamarinGrupo3
 
         private async void btnElegImg_Clicked(object sender, EventArgs e)
         {
-            var tomarfoto = await MediaPicker.CapturePhotoAsync();
-            var stream = await tomarfoto.OpenReadAsync();
-            imgFoto.Source = ImageSource.FromStream(() => stream);
+            
+
+            await CrossMedia.Current.Initialize();
+            try
+            {
+                file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+                {
+                    PhotoSize = PhotoSize.Medium
+                });
+                if (file == null)
+                {
+                    return;
+                }
+                imgFoto.Source = ImageSource.FromStream(() =>
+                {
+                    return file.GetStream();
+                });
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private async void btnTakeImg_Clicked(object sender, EventArgs e)
         {
-            var imagen = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
-            {
-                Title = "Escoga una foto"
 
-            });
-            var stream = await imagen.OpenReadAsync();
+            var file = await MediaPicker.CapturePhotoAsync();
+            var stream = await file.OpenReadAsync();
             imgFoto.Source = ImageSource.FromStream(() => stream);
+
+           
+
         }
     }
 }
