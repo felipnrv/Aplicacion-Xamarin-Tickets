@@ -72,5 +72,17 @@ namespace XamarinGrupo3
                 await DisplayAlert("Error", "El Registro no se elimino correctamente", "Cerrar");
             }
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
+        private void ToolbarItem_Clicked_2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Rol());
+        }
     }
 }
