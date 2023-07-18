@@ -109,8 +109,7 @@ namespace XamarinGrupo3
             var file = await MediaPicker.CapturePhotoAsync();
             var stream = await file.OpenReadAsync();
             imgFoto.Source = ImageSource.FromStream(() => stream);
-
-           
+            
 
         }
     }

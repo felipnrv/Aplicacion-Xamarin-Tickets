@@ -40,12 +40,7 @@
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
-                            <StackLayout Orientation="Horizontal">
-
-
-                                <Button x:Name="btnRecuperarContrasena" Text="¿Olvidaste la contraseña?" BackgroundColor="#087e8b" TextColor="White" HorizontalOptions="EndAndExpand" CornerRadius="30" FontAttributes="Bold" Clicked="btnRecuperarContrasena_Clicked"></Button>
-
-                            </StackLayout>
+                            
                             <Button Text="Iniciar Sesión" x:Name="btnIniciarSesion" BackgroundColor="#087e8b" TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="btnIniciarSesion_Clicked"></Button>
                             <StackLayout Orientation="Horizontal">
 
