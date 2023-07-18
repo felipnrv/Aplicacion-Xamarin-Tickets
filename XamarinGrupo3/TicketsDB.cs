@@ -33,8 +33,7 @@ namespace XamarinGrupo3
                 NombreTick=item.Object.NombreTick,
                 direcciontick=item.Object.direcciontick,
                 detalletick=item.Object.detalletick,
-                actsolucion=item.Object.actsolucion,
-                detsolucion=item.Object.detsolucion,
+               
                 marca=item.Object.marca,
                 modelo=item.Object.modelo,
                 serie=item.Object.serie,

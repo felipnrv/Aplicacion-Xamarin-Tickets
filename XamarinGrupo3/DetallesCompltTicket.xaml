@@ -8,7 +8,7 @@
 
 
 
-            <Grid  Margin="10" Padding="20">
+            <Grid  >
                 <Grid.RowDefinitions >
                     <RowDefinition />
                     <RowDefinition/>
@@ -27,7 +27,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label TextColor="White" Text="ID:" FontSize="Medium" Grid.Row="0" Grid.Column="0"/>
+                
                 <Label TextColor="White" Text=" NOMBRE:" FontSize="Medium" Grid.Row="1" Grid.Column="0"/>
                 <Label TextColor="White" Text="FECHA:" FontSize="Medium" Grid.Row="2" Grid.Column="0"/>
                 <Label TextColor="White" Text="MARCA:" FontSize="Medium" Grid.Row="3" Grid.Column="0"/>
@@ -35,10 +35,9 @@
                 <Label TextColor="White" Text="SERIE:" FontSize="Medium" Grid.Row="5" Grid.Column="0"/>
                 <Label TextColor="White" Text="DIRECCION TICKET:" FontSize="Medium" Grid.Row="6" Grid.Column="0"/>
                 <Label TextColor="White" Text="DETALLE TICKET:" FontSize="Medium" Grid.Row="7" Grid.Column="0"/>
-                <Label TextColor="White" Text="SOLUCION:" FontSize="Medium" Grid.Row="8" Grid.Column="0"/>
-                <Label TextColor="White" Text="DETALLE DE LA SOLUCION:" FontSize="Medium" Grid.Row="9" Grid.Column="0"/>
+                
 
-                <Label TextColor="White" x:Name="txtID" FontSize="Medium" Grid.Row="0" Grid.Column="1"/>
+              
                 <Label TextColor="White" x:Name="txtNombre" FontSize="Medium" Grid.Row="1" Grid.Column="1"/>
                 <Label TextColor="White" x:Name="txtFecha" FontSize="Medium" Grid.Row="2" Grid.Column="1"/>
                 <Label TextColor="White" x:Name="txtMarca" FontSize="Medium" Grid.Row="3" Grid.Column="1"/>
@@ -46,8 +45,7 @@
                 <Label TextColor="White" x:Name="txtSerie" FontSize="Medium" Grid.Row="5" Grid.Column="1"/>
                 <Label TextColor="White" x:Name="txtdirecciontick" FontSize="Medium" Grid.Row="6" Grid.Column="1"/>
                 <Label TextColor="White" x:Name="detalletick" FontSize="Medium" Grid.Row="7" Grid.Column="1"/>
-                <Label TextColor="White" x:Name="actsolucion" FontSize="Medium" Grid.Row="8" Grid.Column="1"/>
-                <Label TextColor="White" x:Name="detsolucion" FontSize="Medium" Grid.Row="9" Grid.Column="1"/>
+               
 
             </Grid>
         </StackLayout>

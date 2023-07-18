@@ -17,12 +17,15 @@
 
                 <!--<Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">-->
 
-                <Picker Title=" l" x:Name="pRol" SelectedIndexChanged="pRol_SelectedIndexChanged_1" TextColor="White" FontSize="Title" FontAttributes="Bold" TitleColor="White">
-                            <Picker.Items>
-                                <x:String>Usuario</x:String>
-                                <x:String>Tecnico</x:String>
-                            </Picker.Items>
-                        </Picker>
+                <Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">
+                    <Picker Title=" Seleccione el Rol" x:Name="pRol" SelectedIndexChanged="pRol_SelectedIndexChanged_1" TextColor="White" FontSize="Title" FontAttributes="Bold" TitleColor="White">
+                        <Picker.Items>
+                            <x:String>Administrador</x:String>
+                            <x:String>Usuario</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+                
                     <!--</Frame>
                 </Frame>-->
                 <!--</Frame>-->

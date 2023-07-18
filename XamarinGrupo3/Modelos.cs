@@ -44,8 +44,6 @@ namespace XamarinGrupo3
         public string NombreTick { set; get; }
         public string direcciontick { set; get; }
         public string detalletick { set; get; }
-        public string actsolucion { set; get; }
-        public string detsolucion { set; get; }
         public string marca { set; get; }
         public string modelo { set; get; }
         public string serie { set; get; }

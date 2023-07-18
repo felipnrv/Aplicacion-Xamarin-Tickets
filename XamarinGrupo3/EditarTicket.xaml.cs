@@ -26,8 +26,7 @@ namespace XamarinGrupo3
             txtDireccion.Text = ticket.direcciontick;
             txtdetck.Text = ticket.detalletick;
             dpFecha.Date = ticket.fecha;
-            txtAct.Text = ticket.actsolucion;
-            txtDetSol.Text = ticket.detsolucion;
+            
             txtMarca.Text = ticket.marca;
             txtModelo.Text = ticket.modelo;
             txtSerie.Text = ticket.serie;
@@ -42,14 +41,13 @@ namespace XamarinGrupo3
             string direccion = txtDireccion.Text;
             string detalletck = txtdetck.Text;
             DateTime fechatck = dpFecha.Date;
-            string actrlz = txtAct.Text;
-            string detallesol = txtDetSol.Text;
+            
             string marca = txtMarca.Text;
             string modelo = txtModelo.Text;
             string serie = txtSerie.Text;
             string id = txtId.Text;
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(detalletck) || fechatck == DateTime.MinValue || fechatck == null || string.IsNullOrEmpty(actrlz) || string.IsNullOrEmpty(detallesol) || string.IsNullOrEmpty(marca) || string.IsNullOrEmpty(modelo) || string.IsNullOrEmpty(serie))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(detalletck) || fechatck == DateTime.MinValue || fechatck == null || string.IsNullOrEmpty(marca) || string.IsNullOrEmpty(modelo) || string.IsNullOrEmpty(serie))
             {
                 await DisplayAlert("Abrir", "Complete toda la Información", "Cerrar");
                 
@@ -62,9 +60,9 @@ namespace XamarinGrupo3
                 ticket.marca = marca;
                 ticket.modelo = modelo;
                 ticket.serie = serie;
-                ticket.detsolucion = detallesol;
+               
                 ticket.fecha = fechatck;
-                ticket.actsolucion = actrlz;
+                
                 ticket.Id = id;
 
                 if(file!=null)

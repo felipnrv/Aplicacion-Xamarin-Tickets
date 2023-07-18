@@ -53,9 +53,9 @@ namespace XamarinGrupo3
                 ticket.marca = marca;
                 ticket.modelo = modelo;
                 ticket.serie = serie;
-                ticket.detsolucion = detallesol;
+               
                 ticket.fecha = fechatck;
-                ticket.actsolucion = actrlz;
+               
 
                 if (file != null)
                 {
