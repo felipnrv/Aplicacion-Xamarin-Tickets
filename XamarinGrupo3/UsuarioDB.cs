@@ -79,7 +79,7 @@ namespace XamarinGrupo3
 
         public async Task<string> Subir(Stream img, string filenomb)
         {
-            var image = await firebaseStorage.Child("Imagen").Child(filenomb).PutAsync(img);
+            var image = await firebaseStorage.Child("imagen").Child(filenomb).PutAsync(img);
             return image;
         }
 
