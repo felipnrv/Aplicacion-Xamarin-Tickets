@@ -12,12 +12,12 @@
                     <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7">-->
                 <Image Source="https://img-c.udemycdn.com/course/240x135/32332_d5ef_13.jpg" WidthRequest="200" HeightRequest="200"></Image>
                     <!--</Frame>-->
-                    
-                    <Label Text="Seleccione el Rol que quiere Acceder" TextColor="White" FontSize="Title" FontAttributes="Bold"></Label>
-                    
-                    <!--<Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">-->
 
-                <Picker Title="Seleccione el Rol" x:Name="pRol" SelectedIndexChanged="pRol_SelectedIndexChanged_1" TextColor="White" FontSize="Title" FontAttributes="Bold" TitleColor="White">
+                <Label Text="Seleccione el Rol que quiere Acceder" TextColor="White" FontSize="Title" FontAttributes="Bold"></Label>
+
+                <!--<Frame CornerRadius="50"  BorderColor="Black" Padding="0" Margin="1" HorizontalOptions="FillAndExpand">-->
+
+                <Picker Title=" l" x:Name="pRol" SelectedIndexChanged="pRol_SelectedIndexChanged_1" TextColor="White" FontSize="Title" FontAttributes="Bold" TitleColor="White">
                             <Picker.Items>
                                 <x:String>Usuario</x:String>
                                 <x:String>Tecnico</x:String>
