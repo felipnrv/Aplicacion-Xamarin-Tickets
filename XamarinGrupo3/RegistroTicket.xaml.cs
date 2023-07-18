@@ -34,14 +34,13 @@ namespace XamarinGrupo3
             string direccion = txtDireccion.Text;
             string detalletck = txtdetck.Text;
             DateTime fechatck = dpFecha.Date;
-            string actrlz = txtAct.Text;
-            string detallesol = txtDetSol.Text;
+           
             string marca = txtMarca.Text;
             string modelo = txtModelo.Text;
             string serie = txtSerie.Text;
             
 
-            if(string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(detalletck) || fechatck==DateTime.MinValue ||fechatck==null || string.IsNullOrEmpty(actrlz) || string.IsNullOrEmpty(detallesol) || string.IsNullOrEmpty(marca) || string.IsNullOrEmpty(modelo) || string.IsNullOrEmpty(serie))
+            if(string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(detalletck) || fechatck==DateTime.MinValue ||fechatck==null  || string.IsNullOrEmpty(marca) || string.IsNullOrEmpty(modelo) || string.IsNullOrEmpty(serie))
             {
                 await DisplayAlert("Abrir", "Complete toda la Información", "Cerrar");
             }

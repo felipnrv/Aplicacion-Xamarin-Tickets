@@ -25,9 +25,17 @@ namespace XamarinGrupo3
                 App.Current.MainPage = new NavigationPage(new DetallesTicket());
 
             }
-            else
+            if (pRol.SelectedIndex == 0)
             {
+
                 App.Current.MainPage = new NavigationPage(new DetallesUsuario());
+
+            }
+            if (pRol.SelectedIndex == 2)
+            {
+
+                App.Current.MainPage = new NavigationPage(new DetallesTecn());
+
             }
         }
     }

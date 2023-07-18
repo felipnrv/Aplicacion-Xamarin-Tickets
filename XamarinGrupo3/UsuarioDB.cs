@@ -1,8 +1,10 @@
 ﻿using Firebase.Auth;
 using Firebase.Database;
+using Firebase.Storage;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -13,7 +15,7 @@ namespace XamarinGrupo3
    
     public class UsuarioDB
     {
-        
+        FirebaseStorage firebaseStorage = new FirebaseStorage("fir-xamarin-213c2.appspot.com");
         //Se coloca la url de la realtimeDB Firebase 
         FirebaseClient firebaseClient = new FirebaseClient("https://fir-xamarin-213c2-default-rtdb.firebaseio.com/");
 
@@ -74,8 +76,12 @@ namespace XamarinGrupo3
             await firebaseClient.Child(nameof(UsuarioModelo) + "/" + id).DeleteAsync();
             return true;
         }
-        
-      
+
+        public async Task<string> Subir(Stream img, string filenomb)
+        {
+            var image = await firebaseStorage.Child("Imagen").Child(filenomb).PutAsync(img);
+            return image;
+        }
 
 
     }

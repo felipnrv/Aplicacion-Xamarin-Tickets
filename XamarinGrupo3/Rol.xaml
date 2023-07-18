@@ -22,6 +22,7 @@
                         <Picker.Items>
                             <x:String>Administrador</x:String>
                             <x:String>Usuario</x:String>
+                            <x:String>Tecnico</x:String>
                         </Picker.Items>
                     </Picker>
                 </Frame>

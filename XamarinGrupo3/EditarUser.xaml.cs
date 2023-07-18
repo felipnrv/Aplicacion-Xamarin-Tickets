@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +15,7 @@ namespace XamarinGrupo3
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditarUser : ContentPage
     {
+        MediaFile file;
         UsuarioDB usuarioDB = new UsuarioDB();
         public EditarUser(UsuarioModelo usuario)
         {
@@ -54,8 +58,12 @@ namespace XamarinGrupo3
                 usuario.ciudaduser= Ciudad;
                 usuario.telefonouser= Telefono;
                 usuario.Id = id;
-                
 
+                if (file != null)
+                {
+                    string imagen = await usuarioDB.Subir(file.GetStream(), Path.GetFileName(file.Path));
+                    usuario.imagen = imagen;
+                }
 
                 bool isUpdate = await usuarioDB.Update(usuario);
                 if (isUpdate)
@@ -73,7 +81,30 @@ namespace XamarinGrupo3
             }
            
         }
-     
+
+        private async void ImgTap_Tapped(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+            try
+            {
+                file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+                {
+                    PhotoSize = PhotoSize.Medium
+                });
+                if (file == null)
+                {
+                    return;
+                }
+                ImgTicket.Source = ImageSource.FromStream(() =>
+                {
+                    return file.GetStream();
+                });
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
   
 }

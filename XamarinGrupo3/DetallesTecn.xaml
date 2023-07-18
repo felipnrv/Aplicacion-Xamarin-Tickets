@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinGrupo3.DetallesTicket">
+             x:Class="XamarinGrupo3.DetallesTecn">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Nuevo Registro" x:Name="AddNuevoTicket" Clicked="AddNuevoTicket_Clicked" Priority="1" Order="Secondary"/>
-        <ToolbarItem Text="Regresar" Clicked="ToolbarItem_Clicked" Order="Secondary" Priority="0"></ToolbarItem>
+        
+        <ToolbarItem Text="Regresar" Clicked="ToolbarItem_Clicked" ></ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content >
@@ -19,7 +19,7 @@
                         <StackLayout Orientation="Horizontal" Padding="5">
 
                             <Frame BackgroundColor="AliceBlue" CornerRadius="50"  Padding="10" HorizontalOptions="Start" Margin="10">
-                                <Image Source="{Binding imagen}" HeightRequest="60" WidthRequest="60"/>
+                                <Image Source="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" HeightRequest="60" WidthRequest="60"/>
 
                             </Frame>
                             <StackLayout HorizontalOptions="StartAndExpand">
@@ -29,7 +29,7 @@
 
                             </StackLayout>
                             <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
-                                <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7">
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="7">
 
                                     <Image Source="https://cdn-icons-png.flaticon.com/512/269/269074.png">
                                         <Image.GestureRecognizers>
@@ -40,15 +40,7 @@
                                 </Frame>
 
 
-                                <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7">
-
-                                    <Image Source="https://cdn-icons-png.flaticon.com/512/3221/3221897.png">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer x:Name="TapBorrar" Tapped="TapBorrar_Tapped" CommandParameter="{Binding Id}"/>
-                                        </Image.GestureRecognizers>
-                                    </Image>
-
-                                </Frame>
+                               
 
 
                             </StackLayout>
